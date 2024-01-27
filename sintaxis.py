@@ -3,7 +3,7 @@
 de
 varias lineas
 '''
-'''
+
 # 2.Cadenas
 
 print('Soy una cadena')
@@ -15,7 +15,7 @@ c='Kingdom Hearts'
 print (a,b,c)
 #contar caracteres
 print(len(a))
-
+''''
 print(b[2:5])
 print(b[:5])
 print(b[2:])
@@ -58,9 +58,10 @@ print(10!=9)
 print(10<=9)
 '''
 #Para opreaciones binarias
+'''''
 x =1
 print(x < 5 & x < 10)
 print(x < 5 | x < 10)
 print(not(x < 5 & x < 10))
-
+'''
 
