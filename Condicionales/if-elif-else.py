@@ -1,5 +1,5 @@
 room = "bed"
-area = 14.0
+area = 20.0
 
 if room == "kit" : 
     print("looking around in the kitchen")
@@ -9,5 +9,8 @@ else:
     print("looking around elsewhere")
     if area > 15:
         print("big place!")
+    elif area <20:
+        print("no es primo")
     else:
         print("pretty small")
+
