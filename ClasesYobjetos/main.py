@@ -25,10 +25,20 @@ print (Spartan.especie)
 print (Spartan.altura)
 
 #Usamos los metodos del Spartan
-Spartan.correr (False)
+Spartan.correr (True)
 Spartan.lanzarGranada()
 print("")
 
 #Usamos los metodos del Arma
 Arma.seleccionarArma(Spartan.nombre)
 Arma.recargarArma(50)
+
+# Usamos los atributos Spartan
+print(Spartan.get_nombre())
+print(Spartan.get_especie())
+print(Spartan.get_altura())
+
+print(Nemesis.get_nombre())
+print(Nemesis.get_especie())
+print(Nemesis.get_altura())
+
