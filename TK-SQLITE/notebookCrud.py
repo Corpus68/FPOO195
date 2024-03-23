@@ -1,6 +1,12 @@
 from tkinter import *
 from tkinter import ttk
 import tkinter as tk
+from CONTROLADOR import *
+
+objControlador= Controlador()
+def ejecutarInsert():
+    objControlador.insertUsuario(var1.get(),var2.get(),var3.get())
+
 
 Ventana= Tk()
 Ventana.title("CRUD de usuarios")
@@ -40,5 +46,5 @@ var3= tk.StringVar()
 Label(pestana1, text="Contraseña: ").pack()
 Entry(pestana1, textvariable=var3).pack()
 
-Button(pestana1, text= "Guardar usuario").pack()
+Button(pestana1, text= "Guardar usuario",command=ejecutarInsert).pack()
 Ventana.mainloop()
