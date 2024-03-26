@@ -7,6 +7,16 @@ objControlador= Controlador()
 def ejecutarInsert():
     objControlador.insertUsuario(var1.get(),var2.get(),var3.get())
 
+def busUsuario():
+    usuarioBD=objControlador.buscarUsuario(varBus.get())
+    # Limpiar el campo de texto antes de insertar el resultado nuevo
+    resultado_text.delete("1.0", END)
+    if usuarioBD == []:
+        messagebox.showwarning("Nada", "Id no existe en BD")
+    else:
+        # Insertar el resultado en el campo de texto en vez de imprimirlo
+        resultado_text.insert(END, str(usuarioBD))
+
 
 Ventana= Tk()
 Ventana.title("CRUD de usuarios")
@@ -47,4 +57,18 @@ Label(pestana1, text="Contraseña: ").pack()
 Entry(pestana1, textvariable=var3).pack()
 
 Button(pestana1, text= "Guardar usuario",command=ejecutarInsert).pack()
+
+#6. Pestaña 2: Buscar Usuario
+Label (pestana2, text= "Guardar Usuario", fg="red", font=("Mono", 18)).pack()
+varBus= tk.StringVar()
+Label(pestana2, text="Id: ").pack()
+Entry(pestana2, textvariable=varBus).pack()
+Button(pestana2, text ="Buscar Usuario", command=busUsuario).pack()
+Label (pestana2, text= "Registrado: ", fg="blue", font=("Mono", 15)).pack()
+resultado_text = tk.Text(pestana2, height=5, width=52)
+resultado_text.pack()
+
+
+
+
 Ventana.mainloop()
